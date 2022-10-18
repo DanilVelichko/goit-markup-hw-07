@@ -90,8 +90,6 @@ img {
   padding-right: 15px;
 }
 
-
-
 /* -----------------------Стилізація логотипу--------------------------- */
 .logo {
   display: inline-block;
@@ -110,12 +108,12 @@ img {
 }
 
 /* ------------------------------------Хедер ---------------------------- */
-.header {
+.header-page {
   height: 80px;
   border-bottom: 1px solid #ECECEC;
 }
 
-.header-main-container {
+.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -128,7 +126,7 @@ img {
 }
 
 /* ---------------------стилізація навігації по сайту--------------------- */
-.site-nav {
+.header-list {
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -137,26 +135,26 @@ img {
   margin-left: 93px;
 }
 
-.site-nav .link {
+.header-list .link {
   color: var(--link-color);
   position: static;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav .link:hover {
+.header-list .link:hover {
   color: var(--hover-color);
 }
 
-.site-nav .link:focus {
+.header-list .link:focus {
   color: var(--focus-color);
 }
 
-.site-nav .link.current {
+.header-list .link.current {
   color: var(--accent-color);
 }
 
-.contact-thumb {
+.header-thumb {
   position: relative;
 }
 
@@ -180,23 +178,18 @@ img {
   border-radius: 2px;
 }
 
-.site-nav .item {
+.header-list .item {
   padding-top: 32px;
   padding-bottom: 32px;
   margin-right: 32px;
   letter-spacing: 0.02em;
 }
 
-.site-nav .item:last-child {
+.header-list .item:last-child {
   margin-right: 0px;
 }
 
-.icon-center {
-  display: flex;
-  justify-content: center;
-}
-
-.site-cont {
+.header-contacts {
   display: flex;
   font-weight: 500;
   font-size: 14px;
@@ -204,7 +197,7 @@ img {
   margin-left: auto;
 }
 
-.site-cont .link {
+.header-contacts .link {
   display: flex;
   color: var(--primary-text-color);
   fill: var(--primary-text-color);
@@ -213,32 +206,45 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-cont .link:hover {
+.header-contacts .link:hover {
   color: var(--hover-color);
   fill: var(--hover-color);
-
 }
 
-.site-cont .link:focus {
+.header-contacts .link:focus {
   color: var(--focus-color);
   fill: var(--hover-color);
-
 }
 
 .link-svg {
   margin-right: 10px;
 }
 
-.site-cont .item {
+.header-contacts .item {
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
 }
 
-.site-cont.flex-contacts {
+.header-contacts.header-gap {
   gap: 30px;
+}
 
+/* -----------------------стилізація секцій----------------------- */
+.section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* -----------------------Стилізаця Кнопки----------------------- */
@@ -270,7 +276,6 @@ button {
   background-color: rgba(196, 196, 196, 1);
 }
 
-
 .hero {
   background-color: #2F303A;
   text-align: center;
@@ -290,7 +295,6 @@ button {
 }
 
 .button-design {
-
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: #2196F3;
   padding: 10px 32px;
@@ -298,7 +302,7 @@ button {
   text-align: center;
 }
 
-.button-text {
+.button-content {
   color: #FFFFFF;
   font-weight: 700;
   font-size: 16px;
@@ -307,37 +311,21 @@ button {
   text-align: center;
 }
 
-/* -----------------------стилізація секцій----------------------- */
-.section-title {
-  margin-top: 0;
-  margin-bottom: 50px;
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}
-
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 /* -----------------------Секція Переваги----------------------- */
-.flex-features {
+.features-container {
   display: flex;
 }
 
-.flex-features-item {
+.features-item {
   margin-right: 30px;
 
 }
 
-.flex-features-item:last-child {
+.features-item:last-child {
   margin-right: 0;
 }
 
-.thumb {
+.features-thumb {
   display: flex;
   width: 270px;
   height: 120px;
@@ -360,21 +348,21 @@ button {
   line-height: 1.71;
 }
 
-.section.section-features {
+.section.features-section {
   padding-bottom: 0px;
 }
 
 /* -----------------------Секція Чим ми займаємось----------------------- */
-.flex-work-examples {
+.examples-list {
   display: flex;
   gap: 30px;
 }
 
-.thumb-work {
+.examples-thumb {
   position: relative;
 }
 
-.text-examples-work {
+.examples-text {
   position: absolute;
   display: inline-block;
   width: 370px;
@@ -390,25 +378,25 @@ button {
   background: rgba(47, 48, 58, 0.8);
 }
 
-.text-examples-work.mob {
+.examples-text.mob {
   padding: 27px 113px;
 }
 
-.text-examples-work.diz {
+.examples-text.diz {
   padding: 27px 95px;
 }
 
 /* -----------------------Секція Команда----------------------- */
-.section.section-team {
+.section.team-section {
   background-color: #F5F4FA;
 }
 
-.flex-team-list {
+.team-list {
   display: flex;
   gap: 30px;
 }
 
-.flex-team-list>.flex-team-item {
+.team-list>.team-item {
   background-color: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -421,11 +409,11 @@ button {
   padding-bottom: 16px;
 }
 
-.team {
+.team-container {
   margin-bottom: 30px;
 }
 
-.team .title {
+.team-container .title {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -434,7 +422,7 @@ button {
   color: var(--title-text-color);
 }
 
-.team .text {
+.team-container .text {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -444,7 +432,7 @@ button {
 
 /* -------------------Стилізація Іконок--------------------------------- */
 
-.actions {
+.team-actions {
   display: block;
   padding: 0;
   margin: 0;
@@ -513,7 +501,7 @@ icon-envelope icon-telephonelogo
   margin-right: 0;
 }
 
-.thumb-client {
+.client-thumb {
   display: flex;
   content: '';
   width: 170px;
@@ -528,16 +516,16 @@ icon-envelope icon-telephonelogo
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.thumb-client:hover .thumb-client-icon {
+.client-thumb:hover .client-icon {
   fill: #2196F3;
 }
 
-.thumb-client:hover {
+.client-thumb:hover {
   border: 1px solid #2196F3;
   fill: #2196F3;
 }
 
-.thumb-client-icon {
+.client-icon {
   fill: #AFB1B8;
   background: transparent;
   width: 106px;
@@ -547,7 +535,7 @@ icon-envelope icon-telephonelogo
 }
 
 /* -----------------------Секція Фільтр робіт, Стилізаця Кнопки----------------------- */
-.button-filter {
+.filter-button {
   display: inline-block;
   color: #212121;
   background: rgba(245, 244, 250, 1);
@@ -562,7 +550,7 @@ icon-envelope icon-telephonelogo
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-filter:hover {
+.filter-button:hover {
   color: #FFFFFF;
   background-color: var(--primary-bttn-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
@@ -571,7 +559,7 @@ icon-envelope icon-telephonelogo
 
 }
 
-.button-filter:focus {
+.filter-button:focus {
   color: #FFFFFF;
   background-color: var(--primary-bttn-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
@@ -605,12 +593,12 @@ icon-envelope icon-telephonelogo
   padding-top: 0px;
 }
 
-.flex-container {
+.projects {
   display: flex;
   flex-wrap: wrap;
 }
 
-.flex-element {
+.projects-item {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
@@ -626,33 +614,34 @@ icon-envelope icon-telephonelogo
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.flex-element:nth-child(3n) {
+.projects-item:nth-child(3n) {
   margin-right: 0;
 }
 
-.flex-element:nth-last-child(-n+3) {
+.projects-item:nth-last-child(-n+3) {
   margin-bottom: 0;
 }
 
-.flex-element>.title {
+.projects-item>.title {
   display: block;
   align-items: center;
 
 }
 
-.flex-element>.text {
+.projects-item>.text {
   display: block;
   align-items: center;
 
 }
 
-.projects-item {
+.projects-box {
   padding: 20px 24px;
   border: 1px solid #EEEEEE;
   border-top: 0;
 }
 
 /* -----------------------Секція Приклади робіт----------------------- */
+
 .projects .title {
   color: var(--title-text-color);
   font-weight: 700;
@@ -671,7 +660,7 @@ icon-envelope icon-telephonelogo
   overflow: hidden;
 }
 
-.about-item-text {
+.item-container {
   opacity: 0;
   position: absolute;
   /* outline: 3px solid rgb(133, 52, 122); */
@@ -690,7 +679,7 @@ icon-envelope icon-telephonelogo
 
 }
 
-.flex-element:hover .about-item-text {
+.projects-item:hover .item-container {
   transform: translateY(0);
   opacity: 1;
 }
@@ -700,16 +689,36 @@ icon-envelope icon-telephonelogo
   display: flex;
 }
 
-.logo-white {
+.footer-style {
+  padding-top: 60px;
+  background-color: #2F303A;
+}
+
+/* -----------------------Футер Логотип----------------------- */
+.footer-logo {
+  display: inline-block;
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.footer-logo-white {
   display: inline-block;
   margin-bottom: 20px;
   color: rgba(255, 255, 255, 1)
 }
 
-.footer-style {
-  padding-top: 60px;
-  background-color: #2F303A;
+.footer-logo-blue {
+  display: inline-block;
+  align-items: center;
+  color: rgba(33, 150, 243, 1)
 }
+
+/* -----------------------Футер Навігація----------------------- */
+
 
 .footer-nav {
   display: inline-block;
@@ -747,14 +756,15 @@ icon-envelope icon-telephonelogo
 
 .footer-nav .link:focus {
   color: var(--focus-color);
-
 }
 
 .footer-nav .last {
   margin-bottom: 0;
 }
 
-.title-footer {
+/* -----------------------Футер соціальні мережі----------------------- */
+
+.footer-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -765,18 +775,7 @@ icon-envelope icon-telephonelogo
   color: #FFFFFF;
 }
 
-.social-item-footer {
-  display: inline-block;
-  height: 44px;
-  width: 44px;
-  background-color: rgba(255, 255, 255, 0.1);
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 50%;
-}
-
-.social-list-footer {
+.footer-list {
   display: flex;
   padding: 0;
   border: none;
@@ -786,7 +785,7 @@ icon-envelope icon-telephonelogo
 
 }
 
-.social-item-footer {
+.footer-item {
   display: inline-block;
   padding: 12px;
   width: 44px;
@@ -800,23 +799,28 @@ icon-envelope icon-telephonelogo
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-item-footer:hover {
+.footer-item:hover {
   fill: #FFFFFF;
   background-color: #2196F3;
   cursor: pointer;
 }
 
+.footer-button {
+  width: 20px;
+  height: 20px;
+}
+
 /** --------------------------- Емейл підписка  --------------------------- */
-.mail-footer-container {
+.footer-mail {
   margin-left: 93px;
 }
 
-.email-field {
+.footer-field {
   display: flex;
   background-color: transparent;
 }
 
-.email-field input {
+.footer-field input {
   width: 358px;
   height: 50px;
   font-weight: 400;
@@ -833,7 +837,7 @@ icon-envelope icon-telephonelogo
 }
 
 
-.button-subscr-design {
+.footer-subscribtion {
   display: flex;
   width: 200px;
   height: 50px;
@@ -851,7 +855,7 @@ icon-envelope icon-telephonelogo
   color: #FFFFFF;
 }
 
-.send-logo {
+.footer-send {
   margin-left: 10px;
   width: 24px;
   height: 24px;
@@ -896,7 +900,7 @@ icon-envelope icon-telephonelogo
 }
 
 
-.modal-close-button {
+.modal-close {
   position: absolute;
   /* outline: 1px red solid; */
   width: 30px;
@@ -908,7 +912,7 @@ icon-envelope icon-telephonelogo
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.modal-close-button:hover .close-logo {
+.modal-close:hover .close-logo {
   fill: #2196F3;
   cursor: pointer;
 
@@ -923,7 +927,7 @@ icon-envelope icon-telephonelogo
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.title-modal {
+.modal-title {
   /* padding-top: 40px; */
   margin-bottom: 30px;
   font-weight: 700;
@@ -934,7 +938,7 @@ icon-envelope icon-telephonelogo
   color: #212121;
 }
 
-.form {
+.modal-form {
   /* margin-left: 40px; */
   text-align: left;
   align-items: center;
@@ -946,8 +950,6 @@ icon-envelope icon-telephonelogo
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
 
 .form-field textarea::placeholder {
   font-weight: 400;
@@ -1028,7 +1030,7 @@ icon-envelope icon-telephonelogo
   height: 120px;
 }
 
-.form {
+.modal-form {
   position: relative;
 }
 
@@ -1074,6 +1076,7 @@ icon-envelope icon-telephonelogo
 .form-field:hover {
   fill: #188CE8;
 }
+
 /* ------------------Чекбокс---------- */
 .form-checkbox {
   position: relative;
@@ -1145,7 +1148,7 @@ icon-envelope icon-telephonelogo
   fill: #2196F3
 }
 
-.button-modal-submit {
+.modal-button {
   width: 200px;
   height: 50px;
   font-weight: 700;
@@ -1162,11 +1165,3 @@ icon-envelope icon-telephonelogo
   margin-left: 124px;
   margin-top: 30px;
 }
-
-/* .click {
-  
-   
-  transform: scaleY(1);
-  transition-duration: 2500ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-} */
