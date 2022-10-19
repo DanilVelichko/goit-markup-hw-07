@@ -1,19 +1,17 @@
 /* -----------------------Секція Переваги----------------------- */
-.features-container {
+.features__container {
     display: flex;
 }
 
-.features-item {
+.features__item {
     margin-right: 30px;
 
-
-
-&:last-child {
-    margin-right: 0;
-}
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
-.features-thumb {
+.features__thumb {
     display: flex;
     width: 270px;
     height: 120px;
@@ -21,21 +19,23 @@
     background-color: #F5F4FA;
 }
 
-.features .title {
-    padding-top: 30px;
-    padding-bottom: 10px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-    color: var(--title-text-color);
+.features {
+    & .title {
+        padding-top: 30px;
+        padding-bottom: 10px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        color: var(--title-text-color);
+    }
+
+    & .text {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
-.features .text {
-    font-size: 14px;
-    line-height: 1.71;
-}
-
-.section.features-section {
+.section.features_section {
     padding-bottom: 0px;
 }

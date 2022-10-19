@@ -1,9 +1,9 @@
 /** --------------------------- Емейл підписка  --------------------------- */
-.footer-mail {
+.footer__mail {
     margin-left: 93px;
 }
 
-.footer-field {
+.footer__field {
     display: flex;
     background-color: transparent;
 
@@ -26,7 +26,7 @@
 }
 
 
-.footer-subscribtion {
+.footer__subscribtion {
     display: flex;
     width: 200px;
     height: 50px;
@@ -44,7 +44,7 @@
     color: #FFFFFF;
 }
 
-.footer-send {
+.footer__send {
     margin-left: 10px;
     width: 24px;
     height: 24px;

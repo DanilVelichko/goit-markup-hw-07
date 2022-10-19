@@ -1,14 +1,14 @@
 /* -----------------------Секція Чим ми займаємось----------------------- */
-.examples-list {
+.examples__list {
     display: flex;
     gap: 30px;
 }
 
-.examples-thumb {
+.examples__thumb {
     position: relative;
 }
 
-.examples-text {
+.examples__text {
     position: absolute;
     display: inline-block;
     width: 370px;
@@ -16,6 +16,7 @@
     padding: 27px 107px;
     bottom: 0;
     color: #FFFFFF;
+    font-style: Bold;
     font-size: 14px;
     line-height: 1.14;
     text-align: center;

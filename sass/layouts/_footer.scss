@@ -1,16 +1,16 @@
 /** -----------------------Футер----------------------- */
-.footer-container {
+.footer__container {
     display: flex;
 }
 
-.footer-style {
+.footer__style {
     padding-top: 60px;
     background-color: #2F303A;
 }
 
 
 /* -----------------------Футер Навігація----------------------- */
-.footer-nav {
+.footer__nav {
     display: inline-block;
     padding-bottom: 60px;
     margin-right: 70px;
@@ -57,7 +57,7 @@
 
 /* -----------------------Футер соціальні мережі----------------------- */
 
-.footer-title {
+.footer__title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -68,7 +68,7 @@
     color: #FFFFFF;
 }
 
-.footer-list {
+.footer__list {
     display: flex;
     padding: 0;
     border: none;
@@ -78,7 +78,7 @@
 
 }
 
-.footer-item {
+.footer__item {
     display: inline-block;
     padding: 12px;
     width: 44px;
@@ -98,7 +98,7 @@
     }
 }
 
-.footer-button {
+.footer__button {
     width: 20px;
     height: 20px;
 }

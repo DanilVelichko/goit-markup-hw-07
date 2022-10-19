@@ -1,5 +1,5 @@
 /* -----------------------Секція Фільтр робіт, Стилізаця Кнопки----------------------- */
-.filter-button {
+.filter__button {
     display: inline-block;
     color: #212121;
     background: rgba(245, 244, 250, 1);
@@ -32,7 +32,7 @@
     }
 }
 
-.filter-list {
+.filter__list {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,7 +44,7 @@
     }
 }
 
-.filter-item {
+.filter__item {
     display: block;
 
     &:last-child {
