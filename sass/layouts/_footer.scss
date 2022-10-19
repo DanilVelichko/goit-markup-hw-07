@@ -1,0 +1,104 @@
+/** -----------------------Футер----------------------- */
+.footer-container {
+    display: flex;
+}
+
+.footer-style {
+    padding-top: 60px;
+    background-color: #2F303A;
+}
+
+
+/* -----------------------Футер Навігація----------------------- */
+.footer-nav {
+    display: inline-block;
+    padding-bottom: 60px;
+    margin-right: 70px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    & .address {
+        display: inline-block;
+        margin-bottom: 9px;
+        color: #FFFFFF;
+    }
+
+    & .contact {
+        display: inline-block;
+        margin-bottom: 9px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    & .link:hover {
+        color: var(--focus-color);
+    }
+
+    & .link:focus {
+        color: var(--focus-color);
+    }
+
+    & .last {
+        margin-bottom: 0;
+    }
+}
+
+.address.link {
+    width: 231px;
+}
+
+
+
+
+
+/* -----------------------Футер соціальні мережі----------------------- */
+
+.footer-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    padding-top: 12px;
+    padding-bottom: 20px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.footer-list {
+    display: flex;
+    padding: 0;
+    border: none;
+    gap: 10px;
+    justify-content: center;
+    background-size: 20px 20px;
+
+}
+
+.footer-item {
+    display: inline-block;
+    padding: 12px;
+    width: 44px;
+    height: 44px;
+    fill: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.1);
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        fill: #FFFFFF;
+        background-color: #2196F3;
+        cursor: pointer;
+    }
+}
+
+.footer-button {
+    width: 20px;
+    height: 20px;
+}

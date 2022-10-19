@@ -1,0 +1,132 @@
+/* ------------------------------------Хедер ---------------------------- */
+.header-page {
+    height: 80px;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+/* ---------------------стилізація навігації по сайту--------------------- */
+.header-list {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    margin-left: 93px;
+
+    & .link {
+        color: var(--link-color);
+        position: static;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    & .link:hover {
+        color: var(--hover-color);
+    }
+
+    & .link:focus {
+        color: var(--focus-color);
+    }
+
+    & .link.current {
+        color: var(--accent-color);
+    }
+
+    & .item {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        margin-right: 32px;
+        letter-spacing: 0.02em;
+    }
+
+    & .item:last-child {
+        margin-right: 0px;
+    }
+}
+
+
+
+.header-thumb {
+    position: relative;
+}
+
+.line-studio-page {
+    position: absolute;
+    width: 48px;
+    height: 4px;
+    left: -2px;
+    top: 44px;
+    background: #2196F3;
+    border-radius: 2px;
+}
+
+.line-portfolio-page {
+    position: absolute;
+    width: 78px;
+    height: 4px;
+    top: 44px;
+    left: -3px;
+    background: #2196F3;
+    border-radius: 2px;
+}
+
+
+
+.header-contacts {
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    margin-left: auto;
+
+    & .link {
+        display: flex;
+        color: var(--primary-text-color);
+        fill: var(--primary-text-color);
+        align-items: center;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    & .link:hover {
+        color: var(--hover-color);
+        fill: var(--hover-color);
+    }
+
+    & .link:focus {
+        color: var(--focus-color);
+        fill: var(--hover-color);
+    }
+
+    & .item {
+        display: flex;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        align-items: center;
+    }
+
+    &.header-gap {
+        gap: 30px;
+    }
+}
+
+.link-svg {
+    margin-right: 10px;
+}
+
+
+
+// /*------------------------------- Іконки в хедері ----------------------------*/
+// icon-envelope icon-telephonelogo
