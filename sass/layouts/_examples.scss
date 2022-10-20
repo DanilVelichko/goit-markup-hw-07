@@ -1,35 +1,47 @@
 /* -----------------------Секція Чим ми займаємось----------------------- */
-.examples__list {
-    display: flex;
-    gap: 30px;
-}
+.examples {
+    &__container {
+        @include container;
 
-.examples__thumb {
-    position: relative;
-}
-
-.examples__text {
-    position: absolute;
-    display: inline-block;
-    width: 370px;
-    height: 70px;
-    padding: 27px 107px;
-    bottom: 0;
-    color: #FFFFFF;
-    font-style: Bold;
-    font-size: 14px;
-    line-height: 1.14;
-    text-align: center;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    background: rgba(47, 48, 58, 0.8);
-
-
-    &.mob {
-        padding: 27px 113px;
     }
 
-    &.diz {
-        padding: 27px 95px;
+    &__section {
+        @include section;
+        padding-top: 0px;
     }
+
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__thumb {
+        position: relative;
+    }
+
+    &__text {
+        position: absolute;
+        display: inline-block;
+        width: 370px;
+        height: 70px;
+        padding: 27px 107px;
+        bottom: 0;
+        color: #FFFFFF;
+        font-style: Bold;
+        font-size: 14px;
+        line-height: 1.14;
+        text-align: center;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        background: rgba(47, 48, 58, 0.8);
+
+        &.mob {
+            padding: 27px 113px;
+        }
+
+        &.diz {
+            padding: 27px 95px;
+        }
+    }
+
 }

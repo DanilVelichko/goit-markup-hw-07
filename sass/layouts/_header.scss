@@ -1,66 +1,107 @@
 /* ------------------------------------Хедер ---------------------------- */
-.header__page {
+.header {
     height: 80px;
     border-bottom: 1px solid #ECECEC;
+
+    &__container {
+        @include container;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+
+    /* ---------------------стилізація навігації по сайту--------------------- */
+    &__list {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        margin-left: 93px;
+
+        & .link {
+            color: var(--link-color);
+            position: static;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        & .link:hover {
+            color: var(--hover-color);
+        }
+
+        & .link:focus {
+            color: var(--focus-color);
+        }
+
+        & .link.current {
+            color: var(--accent-color);
+        }
+
+        & .item {
+            padding-top: 32px;
+            padding-bottom: 32px;
+            margin-right: 32px;
+            letter-spacing: 0.02em;
+        }
+
+        & .item:last-child {
+            margin-right: 0px;
+        }
+    }
+
+
+
+    &__thumb {
+        position: relative;
+    }
+
+    &__contacts {
+        display: flex;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        margin-left: auto;
+
+        & .link {
+            display: flex;
+            color: var(--primary-text-color);
+            fill: var(--primary-text-color);
+            align-items: center;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        & .link:hover {
+            color: var(--hover-color);
+            fill: var(--hover-color);
+        }
+
+        & .link:focus {
+            color: var(--focus-color);
+            fill: var(--hover-color);
+        }
+
+        & .item {
+            display: flex;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            align-items: center;
+        }
+
+        &.header__gap {
+            gap: 30px;
+        }
+    }
 }
 
-.header__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-}
-
-.header__nav {
-    display: flex;
-    align-items: center;
-}
-
-/* ---------------------стилізація навігації по сайту--------------------- */
-.header__list {
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    margin-left: 93px;
-
-    & .link {
-        color: var(--link-color);
-        position: static;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    & .link:hover {
-        color: var(--hover-color);
-    }
-
-    & .link:focus {
-        color: var(--focus-color);
-    }
-
-    & .link.current {
-        color: var(--accent-color);
-    }
-
-    & .item {
-        padding-top: 32px;
-        padding-bottom: 32px;
-        margin-right: 32px;
-        letter-spacing: 0.02em;
-    }
-
-    & .item:last-child {
-        margin-right: 0px;
-    }
-}
-
-
-
-.header__thumb {
-    position: relative;
-}
 
 .line__studio {
     position: absolute;
@@ -82,51 +123,7 @@
     border-radius: 2px;
 }
 
-
-
-.header__contacts {
-    display: flex;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    margin-left: auto;
-
-    & .link {
-        display: flex;
-        color: var(--primary-text-color);
-        fill: var(--primary-text-color);
-        align-items: center;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    & .link:hover {
-        color: var(--hover-color);
-        fill: var(--hover-color);
-    }
-
-    & .link:focus {
-        color: var(--focus-color);
-        fill: var(--hover-color);
-    }
-
-    & .item {
-        display: flex;
-        padding-top: 32px;
-        padding-bottom: 32px;
-        align-items: center;
-    }
-
-    &.header__gap {
-        gap: 30px;
-    }
-}
-
 .link-svg {
     margin-right: 10px;
 }
 
-
-
-// /*------------------------------- Іконки в хедері ----------------------------*/
-// icon-envelope icon-telephonelogo
