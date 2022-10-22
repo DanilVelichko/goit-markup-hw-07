@@ -24,7 +24,7 @@
         display: inline-block;
         width: 370px;
         height: 70px;
-        padding: 27px 107px;
+        padding: 27px;
         bottom: 0;
         color: #FFFFFF;
         font-style: Bold;
@@ -34,14 +34,6 @@
         letter-spacing: 0.03em;
         text-transform: uppercase;
         background: rgba(47, 48, 58, 0.8);
-
-        &.mob {
-            padding: 27px 113px;
-        }
-
-        &.diz {
-            padding: 27px 95px;
-        }
     }
 
 }

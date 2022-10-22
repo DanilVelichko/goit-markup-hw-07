@@ -1,16 +1,14 @@
 /** --------------------------- Модальне вікно --------------------------- */
 .modal {
-    &__backdrop {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        background-color: #41383885;
-        animation-fill-mode: none;
-        opacity: 1;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #41383885;
+    animation-fill-mode: none;
+    opacity: 1;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     &__container {
         width: 528px;
@@ -57,17 +55,10 @@
 }
 
 // ------------------Кнопка закриття модального вікна------------------
-.close__logo {
-    width: 11px;
-    height: 11px;
-    border-color: #757575;
-    fill: #000000;
-}
-
 
 .modal__close {
     position: absolute;
-    /* outline: 1px red solid; */
+
     width: 30px;
     height: 30px;
     background-color: transparent;
@@ -75,11 +66,20 @@
     right: 8px;
     top: 8px;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover .close__logo {
         fill: #2196F3;
         cursor: pointer;
     }
+}
+
+.close__logo {
+    width: 11px;
+    height: 11px;
+    border-color: #757575;
+    fill: #000000;
 }
 
 .is-hidden {
@@ -194,6 +194,7 @@
     border-bottom: 1px solid #2196F3;
 }
 
+
 .name__logo {
     width: 12px;
     height: 12px;
@@ -229,26 +230,9 @@
 
 
 /* ------------------Чекбокс---------------------- */
-.form__checkbox {
-    position: relative;
-    display: flex;
-       align-items: center;
-}
+.form__checkbox {}
 
-.policy__checkbox {
-    padding-left: 7px;
-    display: flex;
-    width: 400px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: #757575;
-    justify-content: space-between;
-    align-items: center;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+.policy__checkbox {}
 
 .checkbox {
     display: flex;
@@ -261,6 +245,27 @@
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+
+    &__form {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &__policy {
+        padding-left: 7px;
+        display: flex;
+        width: 400px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: #757575;
+        justify-content: space-between;
+        align-items: center;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
     &__logo {
         position: absolute;

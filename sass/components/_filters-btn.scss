@@ -1,5 +1,13 @@
 /* -----------------------Секція Фільтр робіт, Стилізаця Кнопки----------------------- */
 .filters {
+    @include section;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 0px;
+    padding-bottom: 50px;
+
     &__button {
         display: inline-block;
         color: #212121;
@@ -40,16 +48,7 @@
 
     }
 
-    &__list {
-        @include section;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        margin-bottom: 0px;
-        padding-bottom: 50px;
-
-    }
+    &__list {}
 
     &__item {
         display: block;

@@ -289,26 +289,28 @@ summary {
 .header__list .link.current {
   color: var(--accent-color);
 }
-.header__list .item {
+.header__item {
   padding-top: 32px;
   padding-bottom: 32px;
   margin-right: 32px;
   letter-spacing: 0.02em;
 }
-.header__list .item:last-child {
+.header__item:last-child {
   margin-right: 0px;
 }
 .header__thumb {
   position: relative;
 }
-.header__contacts {
+
+.contacts {
   display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   margin-left: auto;
+  gap: 30px;
 }
-.header__contacts .link {
+.contacts__link {
   display: flex;
   color: var(--primary-text-color);
   fill: var(--primary-text-color);
@@ -316,22 +318,19 @@ summary {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header__contacts .link:hover {
+.contacts__link:hover {
   color: var(--hover-color);
   fill: var(--hover-color);
 }
-.header__contacts .link:focus {
+.contacts__link:focus {
   color: var(--focus-color);
   fill: var(--hover-color);
 }
-.header__contacts .item {
+.contacts__item {
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
-}
-.header__contacts.header__gap {
-  gap: 30px;
 }
 
 .line__studio {
@@ -343,7 +342,6 @@ summary {
   background: #2196F3;
   border-radius: 2px;
 }
-
 .line__portfolio {
   position: absolute;
   width: 78px;
@@ -359,7 +357,11 @@ summary {
 }
 
 /* -----------------------Секція основного банеру----------------------- */
-.hero__overlay {
+.hero__section {
+  background-color: #2F303A;
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
   max-width: 1600px;
   max-height: 600px;
   margin-left: auto;
@@ -369,12 +371,6 @@ summary {
   background-size: cover;
   background-position: center;
   background-color: rgb(196, 196, 196);
-}
-.hero__section {
-  background-color: #2F303A;
-  text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
 }
 .hero__container {
   margin-left: auto;
@@ -400,8 +396,6 @@ summary {
   background-color: #2196F3;
   padding: 10px 32px;
   min-width: 152px;
-}
-.button__content {
   color: #FFFFFF;
   font-weight: 700;
   font-size: 16px;
@@ -442,6 +436,7 @@ summary {
   height: 120px;
   align-items: center;
   background-color: #F5F4FA;
+  border-radius: 4px;
 }
 .features .title {
   padding-top: 30px;
@@ -597,7 +592,7 @@ summary {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.clients__thumb:hover .client__icon {
+.clients__thumb:hover .clients__icon {
   fill: #2196F3;
 }
 .clients__thumb:hover {
@@ -614,7 +609,7 @@ summary {
 }
 
 /** --------------------------- Модальне вікно --------------------------- */
-.modal__backdrop {
+.modal {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -662,16 +657,8 @@ summary {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close__logo {
-  width: 11px;
-  height: 11px;
-  border-color: #757575;
-  fill: #000000;
-}
-
 .modal__close {
   position: absolute;
-  /* outline: 1px red solid; */
   width: 30px;
   height: 30px;
   background-color: transparent;
@@ -679,10 +666,19 @@ summary {
   right: 8px;
   top: 8px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal__close:hover .close__logo {
   fill: #2196F3;
   cursor: pointer;
+}
+
+.close__logo {
+  width: 11px;
+  height: 11px;
+  border-color: #757575;
+  fill: #000000;
 }
 
 .is-hidden {
@@ -804,13 +800,24 @@ summary {
 }
 
 /* ------------------Чекбокс---------------------- */
-.form__checkbox {
+.checkbox {
+  display: flex;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.checkbox__form {
   position: relative;
   display: flex;
   align-items: center;
 }
-
-.policy__checkbox {
+.checkbox__policy {
   padding-left: 7px;
   display: flex;
   width: 400px;
@@ -823,19 +830,6 @@ summary {
   align-items: center;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.checkbox {
-  display: flex;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 .checkbox__logo {
   position: absolute;
@@ -882,22 +876,15 @@ summary {
 
 /** -----------------------Футер----------------------- */
 .footer {
-  /* -----------------------Футер Навігація----------------------- */
-  /* -----------------------Футер соціальні мережі----------------------- */
-}
-.footer__container {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.footer__style {
   padding-top: 60px;
   background-color: #2F303A;
+  /* -----------------------Футер Навігація----------------------- */
+}
+.footer--container {
+  display: flex;
 }
 .footer__nav {
+  width: 231px;
   display: inline-block;
   padding-bottom: 60px;
   margin-right: 70px;
@@ -919,51 +906,9 @@ summary {
   margin-bottom: 9px;
   color: rgba(255, 255, 255, 0.6);
 }
-.footer__nav .link:hover {
+.footer__nav .link:hover,
+.footer__nav link:focus {
   color: var(--focus-color);
-}
-.footer__nav .link:focus {
-  color: var(--focus-color);
-}
-.footer__nav .last {
-  margin-bottom: 0;
-}
-.footer .footer__actions {
-  display: block;
-  padding: 0;
-  margin: 0;
-  list-style: 0;
-}
-.footer .button {
-  display: flex;
-  padding: 0;
-  border: none;
-  gap: 10px;
-  margin-bottom: 30px;
-  justify-content: center;
-  background-size: 20px 20px;
-}
-.footer .button__icon {
-  display: inline-block;
-  padding: 12px;
-  width: 44px;
-  height: 44px;
-  fill: #AFB1B8;
-  background-color: #fff;
-  align-items: center;
-  text-align: center;
-  border-radius: 50%;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.footer .button__icon:hover {
-  fill: #FFFFFF;
-  background-color: #2196F3;
-  cursor: pointer;
-}
-.footer .button__logo {
-  width: 20px;
-  height: 20px;
 }
 .footer__title {
   font-weight: 700;
@@ -975,7 +920,15 @@ summary {
   text-transform: uppercase;
   color: #FFFFFF;
 }
-.footer__list {
+
+/* -----------------------Футер соціальні мережі----------------------- */
+.socials {
+  display: block;
+  padding: 0;
+  margin: 0;
+  list-style: 0;
+}
+.socials__list {
   display: flex;
   padding: 0;
   border: none;
@@ -983,7 +936,7 @@ summary {
   justify-content: center;
   background-size: 20px 20px;
 }
-.footer__item {
+.socials__item {
   display: inline-block;
   padding: 12px;
   width: 44px;
@@ -996,18 +949,14 @@ summary {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer__item:hover {
+.socials__item:hover {
   fill: #FFFFFF;
   background-color: #2196F3;
   cursor: pointer;
 }
-.footer__button {
+.socials__button {
   width: 20px;
   height: 20px;
-}
-
-.address.link {
-  width: 231px;
 }
 
 /* ----------------------Контейнери прикладу робіт--------------------------------------- */
@@ -1134,7 +1083,7 @@ summary {
   display: inline-block;
   width: 370px;
   height: 70px;
-  padding: 27px 107px;
+  padding: 27px;
   bottom: 0;
   color: #FFFFFF;
   font-style: Bold;
@@ -1144,12 +1093,6 @@ summary {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   background: rgba(47, 48, 58, 0.8);
-}
-.examples__text.mob {
-  padding: 27px 113px;
-}
-.examples__text.diz {
-  padding: 27px 95px;
 }
 
 button {
@@ -1174,6 +1117,25 @@ button {
 }
 
 /* -----------------------Секція Фільтр робіт, Стилізаця Кнопки----------------------- */
+.filters {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 0px;
+  padding-bottom: 50px;
+}
+.filters__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
 .filters__button {
   display: inline-block;
   color: #212121;
@@ -1217,25 +1179,6 @@ button {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-}
-.filters__list {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 0px;
-  padding-bottom: 50px;
-}
-.filters__list__title {
-  margin-top: 0;
-  margin-bottom: 50px;
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
 }
 .filters__item {
   display: block;
